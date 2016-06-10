@@ -1,0 +1,127 @@
+{% extends "index.html" %}
+
+	{% block title %} Eureka | Home {% endblock %} 
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $(".button-collapse").sideNav();
+        });
+      </script>
+
+	{% block header %}
+
+        <div class="navbar-fixed">
+          <nav class="blue" >
+            <div class="nav-wrapper">
+              <a href="/home" class="brand-logo"> &nbsp; Eureka &nbsp;</a>
+
+
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="/profile" id="home_link"> Profile</a></li>
+                <li><a href="/new_proj" id="new_proj_link">New Project</a></li>
+                <li><a href="/logout" id="logout_link">Logout</a></li>
+
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li>
+                  <a href="#">
+                    <input id="search" type="search" placeholder="Search">
+                  </a>
+                </li>
+                <li><a href="/profile" id="home_link"> Profile</a></li>
+                <li><a href="/new_proj" id="new_proj_link">New Project</a></li>
+                <li><a href="/logout" id="logout_link">Logout</a></li>
+
+              </ul>
+
+            </div>
+          </nav>
+        </div>
+
+	{% endblock %}
+
+				<!--=================== MAIN CONTENT ======================-->
+
+
+	{% block main %}
+
+		<center> <h4>Welcome to Eureka, {{nme}}. </h4> </center>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card hoverable">
+                  <div class="card-image">
+                    <img src="./static/img/08.jpg">
+                    <span class="card-title">Welcome to Eureka</span>
+                  </div>
+                  <div class="card-content">
+                    <p>Have an idea? Have a project in mind? Need help? Need an audience? Eureka is here for you!</p>
+                  </div>
+                  <div class="card-action">
+                    Eureka, a home for your ideas!!
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card hoverable">
+                  <div class="card-content">
+                    <span class="card-title">About Eureka</span>
+                      <p> 
+
+                      Eureka is an online platform where innovators post their ideas for the purpose of creating awareness. <br><br>
+
+                      Some ideas are conceived and never see the light of day due to certain factors like lack of support, or audience among other reasons. <br><br>
+
+                      This platform seeks to bridge that gap and give a voice as well as an audience to your ideas. <br><br>
+
+                      It creates a community of like-minded individuals who can help and contribute to the diverse set of projects on the platform <br><br>
+
+                      With your help, we will be able to build a global community of collaborating innovators <br>
+
+                      </p>
+
+                  </div>
+                  <div class="card-action">
+                  <center> We Are Social Too!! <br><br>
+                    <a href="http://www.facebook.com/EurekaPlatform" target="_blank"> <img src="./static/img/facebook.png"> </a> &nbsp;
+                    
+                    <a href="http://www.twitter.com/EurekaPlatform" target="_blank"> <img src="./static/img/twitter.png"> </a> &nbsp;
+
+                    <a href="http://www.plus.google.com/pages/EurekaPlatform" target="_blank"> <img src="./static/img/google.png"> </a> &nbsp; 
+                  </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card hoverable">
+                  <div class="card-content">
+                    <span class="card-title">Categories</span>
+                    <p>
+                      Here at Eureka we offer several categories on this platform.<br> They include: <br><br>
+
+                      1. Computer Science Projects <br><br>
+
+                      2. Business Projects <br><br>
+
+                      3. Engineering Projects <br><br>
+
+                      4. Other Projects <br><br>
+                    </p>
+                  </div>
+                  <div class="card-action">
+						<a href="/categories" > More... </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+				{% endblock %}
+

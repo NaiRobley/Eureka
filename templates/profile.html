@@ -1,0 +1,125 @@
+{% extends "index.html" %}
+
+{% block title %} Eureka | Profile {% endblock %}
+
+{% block header %}
+
+        <div class="navbar-fixed">
+          <nav class="blue" >
+            <div class="nav-wrapper">
+              <a href="/home" class="brand-logo"> &nbsp; Eureka &nbsp;</a>
+
+
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="/edit_profile"> Edit Profile </a></li>
+                <li><a href="/new_proj"> New Project</a></li>
+                <li><a href="/logout"> Logout</a></li>
+
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li>
+                  <a href="#">
+                    <input id="search" type="search" placeholder="Search">
+                  </a>
+                </li>
+                <li><a href="/edit_profile"> Edit Profile </a></li>
+                <li><a href="/new_proj">New Project</a></li>
+                <li><a href="/logout">Logout</a></li>
+
+              </ul>
+
+            </div>
+          </nav>
+        </div>
+
+{% endblock %}
+
+{% block main %}
+
+				<script type="text/javascript">
+				  $(document).ready(function(){
+				    $('.collapsible').collapsible({
+				      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+				    });
+				  });
+
+				  $(document).ready(function(){
+				    $('ul.tabs').tabs();
+				  });
+
+				</script>
+
+				  <div class="row">
+				    <div class="col s12">
+				      <ul class="tabs">
+				        <li class="tab col s6"><a class="active" href="#mydetails">My Details</a></li>
+				        <li class="tab col s6"><a  href="#myprojects">My Projects</a></li>
+				      </ul>
+				    </div>
+				    <div id="mydetails" class="col s12">
+				    	<center> <h3>My Details</h3> </center>
+
+				    	{{msg2}}
+
+				    		<ul class="collection">
+				    			<li class="collection-item">
+				    				<span class="title"> <i> <b> First name: </b> </i> </span>
+				    				<p>	&nbsp; &nbsp; &nbsp; &nbsp; {{fname}}
+				    				</p>
+				    			</li>
+				    			<li class="collection-item">
+				    				<span class="title"> <i> <b> Last name: </b> </i> </span>
+				    				<p> &nbsp; &nbsp; &nbsp; &nbsp;	{{lname}}
+				    				</p>
+				    			</li>
+				    			<li class="collection-item">
+				    				<span class="title"> <i> <b> Email: </b> </i> </span>
+				    				<p> &nbsp; &nbsp; &nbsp; &nbsp;	{{email}}
+				    				</p>
+				    			</li>
+				    			<li class="collection-item">
+				    				<span class="title"> <i> <b> Gender: </b> </i> </span>
+				    				<p> &nbsp; &nbsp; &nbsp; &nbsp;	{{gender}}
+				    				</p>
+				    			</li>
+				    			<li class="collection-item">
+				    				<span class="title"> <i> <b> Username: </b> </i> </span>
+				    				<p> &nbsp; &nbsp; &nbsp; &nbsp;	{{username}}
+				    				</p>
+				    			</li>				    							    							    			
+				    		</ul>
+
+				    	<center>
+				    		<a class="waves-effect waves-light btn" href="/edit_profile"><i class="material-icons right">mode_edit</i> Edit profile </a>
+				    	 </center>
+
+
+				    </div>
+				    <div id="myprojects" class="col s12">
+
+				    	<center> <h3>My Projects</h3> </center>
+
+							{{msg}} <br>
+
+						  <ul class="collapsible col s12" data-collapsible="expandable">
+
+						  {% for n in prof_dict %}
+						    <li>
+						      <div class="collapsible-header"> <b> {{n['name']}} </b> </div>
+						      <div class="collapsible-body"><p> {{n['desc']}} </p></div>
+						    </li>
+
+						   {% endfor %}
+						  </ul>
+
+				    	<center>
+				    		<a class="waves-effect waves-light btn" href="/new_proj"><i class="material-icons right">add</i> New Project </a>
+				    	 </center>
+
+				    </div>
+
+				  </div>
+
+{% endblock %}

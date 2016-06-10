@@ -1,0 +1,111 @@
+{% extends "index.html" %}
+
+{% block title %} Eureka | Report {% endblock %}
+
+{% block header %}
+
+        <div class="navbar-fixed">
+          <nav class="blue" >
+            <div class="nav-wrapper">
+              <a href="/adminhome" class="brand-logo"> &nbsp; Eureka &nbsp;</a>
+
+
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+
+                <li><a href="/logout" id="logout_link">Logout</a></li>
+
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li>
+                  <a href="#">
+                    <input id="search" type="search" placeholder="Search">
+                  </a>
+                <li><a href="/logout" id="logout_link">Logout</a></li>
+
+              </ul>
+
+            </div>
+          </nav>
+        </div>
+
+{% endblock %}
+
+{% block main %}
+
+<!-- 				<div id="page1">
+
+					<div style="text-align: center;"> -->
+
+
+						<h3> Here is your report of all the items in the database </h3>
+
+						<hr>
+
+						<center> <h4> Admins </h4> </center>
+
+						<table class="striped">
+							<tr> <th> Username </th> <th> Email  </th> </tr>
+								
+								{% for n in admin_dict %}
+
+									<tr> <td> {{n['username']}} </td>  <td> {{n['email']}} </td> </tr>
+								
+								{% endfor %}
+							
+						</table>
+
+						<br><br>
+
+						<hr>
+
+						<center> <h4> Users </h4> </center>
+
+						<table class="striped">
+							<tr> <th> First Name </th> <th> Last name </th> <th> Email </th> <th> Gender </th> <th> Username </th> </tr>
+
+						{% for n in user_dict %}
+								
+									<tr> <td> {{n['fname']}} </td>  <td> {{n['lname']}} </td> <td> {{n['email']}} </td> <td> {{n['gender']}} </td> <td> {{n['username']}} </td> </tr>
+								
+								{% endfor %}
+
+						</table>
+
+						<br><br>
+
+						<hr>
+
+						<center> <h4> Categories </h4> </center>
+						<table class="striped">
+							<tr> <th> Category name </th> <th> Category Description </th> </tr>
+
+							{% for n in cat_dict %}
+							<tr> <td> {{n['name']}} </td> <td> {{n['desc']}} </td> </tr>
+							{% endfor %}
+						</table>
+
+						<br><br>
+
+						<hr>
+
+						<center> <h4> Projects </h4> </center>
+						<table>
+							<tr> <th> Project Name </th> <th> Project Description </th> <th> Category </th> </tr>
+
+							{% for n in prjct_dict %}
+							<tr> <td> {{n['name']}} </td> <td> {{n['desc']}} </td> <td> {{n['category']}} </td> </tr>
+							{% endfor %}
+						</table>
+
+						<br><br>
+
+					<!-- <a href="/pdfroute" class="href_report"> &nbsp; Generate PDF &nbsp; </a> -->
+
+				<!-- </div> -->
+
+
+
+
+{% endblock %}

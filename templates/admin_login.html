@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block title %} Eureka | Admin Login {% endblock %}
+
+{% block header %}
+
+				<div id="mheader">
+
+					<h1 class="logo"> &nbsp; <a href="/" class="logo">Eureka</a> </h1>
+
+				</div>
+
+				<nav id="navi" style="float: right;">
+
+					<br>
+
+					<!-- <a href="/profile" id="home_link"> &nbsp; Profile &nbsp; </a>
+					<a href="/new_proj" id="new_proj_link"> &nbsp; New Project &nbsp; </a>
+					<a href="/logout" id="logout_link"> &nbsp; Logout &nbsp; </a> -->
+
+				</nav>
+
+{% endblock %}
+
+{% block main %}
+
+		<section>
+
+			<article id="article_login" style="">
+
+				<h2> Admin Login </h2>
+
+				<div style="color: red;"> {{msg}} <br>  </div>
+
+				<form method="POST" action="adminloginpg" id="frmlogin">
+
+					Username: <br>
+
+					<input type="text" name="username" placeholder="Username" required> <br><br>
+
+					Password: <br>
+
+					<input type="password" name="password" placeholder="Password" required> <br><br>
+
+					<input type="submit" value=" &nbsp; Log In &nbsp; ">
+
+				</form>
+
+				<br><br>
+
+			</article>
+
+		</section>
+
+{% endblock %}

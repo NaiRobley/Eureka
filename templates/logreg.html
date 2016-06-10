@@ -1,0 +1,175 @@
+{% extends "index.html" %}
+
+	{% block title %} Eureka | Login or Register {% endblock %} 
+
+	{% block header %}
+
+        <div class="navbar-fixed">
+          <nav class="blue" >
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo"> &nbsp; Eureka &nbsp; </a>
+
+
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li>
+                  <a href="#">
+                    <input id="search" type="search" placeholder="Search">
+                  </a>
+                </li>
+                <li><a href="/">Home</a></li>
+
+              </ul>
+
+            </div>
+          </nav>
+        </div>
+
+	{% endblock %}
+
+	{% block main %}
+
+		  <script>
+		     $(document).ready(function() {
+		        $('select').material_select();
+		    });
+		  </script>
+
+		<div class="container">
+		  <div class="row">
+		    <div class="col s12">
+		      <ul class="tabs">
+		        <li class="tab col s4 m4"><a class="active" href="#logintab">Login</a></li>
+		        <li class="tab col s4 m4"><a  href="#regtab">Register</a></li>
+		        <li class="tab col s4 m4"><a href="#admintab">Admin</a></li>
+		      </ul>
+		    </div>
+		    <div id="logintab" class="col s12">
+		      <center> <h4> Login </h4> </center>
+
+		      <div style="color: red;"> {{msg}} <br>  </div>
+
+		    	<form method="POST" action="login" id="frmlogin" class="col s12">
+
+				  <div class="row">
+			        <div class="input-field col s12">
+			          <input id="username" name="username" type="text" class="validate" required>
+			          <label for="username">Username</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+			        <div class="input-field col s12">
+			          <input id="password" name="password" type="password" class="validate" required>
+			          <label for="password">Password</label>
+			        </div>
+			      </div>
+
+                  <div class="row">
+                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                         <i class="material-icons right">send</i>
+                     </button>
+                  </div>
+				</form>
+
+		    </div>
+		    <div id="regtab" class="col s12">
+
+		    <center> <h4> Register </h4> </center>
+
+		    <div style="color: green;"> {{msg2}} <br> </div>
+
+				<form method="POST" action="reg" id="frmreg" class="col s12">
+
+				  <div class="row">
+			        <div class="input-field col s6">
+			          <input id="fname" name="fname" type="text" class="validate" required>
+			          <label for="fname">First Name</label>
+			        </div>
+
+			        <div class="input-field col s6">
+			          <input id="lname" name="lname" type="text" class="validate" required>
+			          <label for="lname">Last Name</label>
+			        </div>
+			      </div>
+
+				  <div class="row">
+			        <div class="input-field col s12">
+			          <input id="email" name="email" type="email" class="validate" required>
+			          <label for="email">Email</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+					  <div class="input-field col s12">
+					    <select name="gender">
+					      <option value="" disabled selected>Choose your option</option>
+					      <option value="male">Male</option>
+					      <option value="female">Female</option>
+					    </select>
+					    <label>Gender</label>
+					  </div>
+			      </div>
+
+				  <div class="row">
+			        <div class="input-field col s12">
+			          <input id="username" name="username" type="text" class="validate" required>
+			          <label for="username">Username</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+			        <div class="input-field col s12">
+			          <input id="password" name="password" type="password" class="validate" required>
+			          <label for="password">Password</label>
+			        </div>
+			      </div>
+
+                  <div class="row">
+                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                         <i class="material-icons right">send</i>
+                     </button>
+                  </div>
+
+				</form>
+
+		    </div>
+
+		    <div id="admintab" class="col s12">
+		      <center> <h4> Admin Login </h4> </center>
+
+		      <div style="color: red;"> {{msg}} <br>  </div>
+
+		    	<form method="POST" action="adminloginpg" id="frmlogin" class="col s12">
+
+				  <div class="row">
+			        <div class="input-field col s12">
+			          <input id="username" name="username" type="text" class="validate" required>
+			          <label for="username">Username</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+			        <div class="input-field col s12">
+			          <input id="password" name="password" type="password" class="validate" required>
+			          <label for="password">Password</label>
+			        </div>
+			      </div>
+
+                  <div class="row">
+                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                         <i class="material-icons right">send</i>
+                     </button>
+                  </div>
+				</form>
+		    	
+		    </div>
+		  </div>
+		</div>
+
+	{% endblock %}

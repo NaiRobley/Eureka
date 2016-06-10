@@ -1,0 +1,103 @@
+{% extends "index.html" %}
+
+{% block title %} Eureka | New Project {% endblock %}
+
+{% block header %}
+
+        <div class="navbar-fixed">
+          <nav class="blue" >
+            <div class="nav-wrapper">
+              <a href="/home" class="brand-logo"> &nbsp; Eureka &nbsp;</a>
+
+
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="/profile"> Profile </a></li>
+                <li><a href="/logout"> Logout</a></li>
+
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li>
+                  <a href="#">
+                    <input id="search" type="search" placeholder="Search">
+                  </a>
+                </li>
+                <li><a href="/profile"> Profile </a></li>
+                <li><a href="/logout">Logout</a></li>
+
+              </ul>
+
+            </div>
+          </nav>
+        </div>
+
+{% endblock %}
+
+
+{% block main %}
+
+		  <script>
+		     $(document).ready(function() {
+		        $('select').material_select();
+		    });
+		  </script>
+
+						<h3> Post A New Project </h3>
+
+						<form method="POST" action="uploadproject" id="newprjct" name="newprjct" class="col s12">
+
+							<div class="row">
+						      <div class="input-field col s8">
+						        <input id="pname" name="pname" type="text" class="validate" required>
+						        <label for="pname">Title</label>
+						      </div>
+
+							  <div class="input-field col s4">
+							    <select name="category">
+							        <option value="" disabled selected>Choose your option</option>
+									<option value="1"> Computer Science </option>
+									<option value="2"> Business </option>
+									<option value="3"> Engineering </option>
+									<option value="4"> Other </option>
+							    </select>
+							    <label>Category</label>
+							  </div>
+					      </div>		
+
+						  <div class="row">
+						    <form class="col s12">
+						      <div class="row">
+						        <div class="input-field col s12">
+						          <textarea id="pdesc" name="pdesc" class="materialize-textarea"></textarea>
+						          <label for="pdesc">Description</label>
+						        </div>
+						      </div>
+						    </form>
+						  </div>					      
+
+		                  <div class="row">
+		                  	<div class="col s6">
+		                  	<center>
+
+							<!-- <input class="btn waves-effect waves-light" type="submit" value="Submit"> -->
+
+							  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+							    <i class="material-icons right">send</i>
+							  </button>
+
+		                     <!-- <input type="submit" name="submit" value="Submit"> -->
+		                     </center>
+		                    </div>
+
+		                    <div class="col s6">
+		                    <center>
+		                    	<a class="waves-effect waves-light btn" href="/profile"><i class="material-icons right">cancel</i>Cancel</a>
+		                     </center>
+		                    </div>
+		                  </div>
+						</form>
+<!-- 					</div>
+				</div> -->
+
+{% endblock %}

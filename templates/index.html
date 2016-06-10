@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="./static/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title> {% block title %} Eureka {% endblock %} </title>
+      <style type="text/css">
+        body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+          }
+        main {
+          flex: 1 0 auto;
+          }
+      </style>
+
+    </head>
+
+    <body>
+
+      <script type="text/javascript" src="./static/js/jquery.min.js"></script>
+      <script type="text/javascript" src="./static/js/materialize.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $(".button-collapse").sideNav();
+        });
+      </script>
+
+      {% block header %}
+        <div class="navbar-fixed">
+          <nav class="blue" >
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo"> &nbsp; Eureka &nbsp;</a>
+
+
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="/logreg">Login/Register</a></li>
+
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li>
+                  <a href="#">
+                    <input id="search" type="search" placeholder="Search">
+                  </a>
+                </li>
+                <li><a href="/logreg">Login/Register</a></li>
+
+              </ul>
+
+            </div>
+          </nav>
+        </div>
+        {% endblock %}
+
+        <div class="container">
+
+        {% block main %}
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card hoverable">
+                  <div class="card-image">
+                    <img src="./static/img/08.jpg">
+                    <span class="card-title">Welcome to Eureka</span>
+                  </div>
+                  <div class="card-content">
+                    <p>Have an idea? Have a project in mind? Need help? Need an audience? Eureka is here for you!</p>
+                  </div>
+                  <div class="card-action">
+                    Eureka, a home for your ideas!!
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card hoverable">
+                  <div class="card-content">
+                    <span class="card-title">About Eureka</span>
+                      <p> 
+
+                      Eureka is an online platform where innovators post their ideas for the purpose of creating awareness. <br><br>
+
+                      Some ideas are conceived and never see the light of day due to certain factors like lack of support, or audience among other reasons. <br><br>
+
+                      This platform seeks to bridge that gap and give a voice as well as an audience to your ideas. <br><br>
+
+                      It creates a community of like-minded individuals who can help and contribute to the diverse set of projects on the platform <br><br>
+
+                      With your help, we will be able to build a global community of collaborating innovators <br>
+
+                      </p>
+
+                  </div>
+                  <div class="card-action">
+                  <center> We Are Social Too!! <br><br>
+                    <a href="http://www.facebook.com/EurekaPlatform" target="_blank"> <img src="./static/img/facebook.png"> </a> &nbsp;
+                    
+                    <a href="http://www.twitter.com/EurekaPlatform" target="_blank"> <img src="./static/img/twitter.png"> </a> &nbsp;
+
+                    <a href="http://www.plus.google.com/pages/EurekaPlatform" target="_blank"> <img src="./static/img/google.png"> </a> &nbsp; 
+                  </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card hoverable">
+                  <div class="card-content">
+                    <span class="card-title">Categories</span>
+                    <p>
+                      Here at Eureka we offer several categories on this platform.<br> They include: <br><br>
+
+                      1. Computer Science Projects <br><br>
+
+                      2. Business Projects <br><br>
+
+                      3. Engineering Projects <br><br>
+
+                      4. Other Projects <br><br>
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="/logreg"> Register or Login for More Information</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        {% endblock %}
+          
+        </div>
+
+
+        <!-- FOOTER -->
+         <footer class="page-footer blue">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Eureka</h5>
+                <p class="grey-text text-lighten-4">A Home for Your Ideas</p>
+              </div>
+<!--               <div class="col l4 offset-l2 s12 white" >
+                <h5 class="black-text">Contact Us</h5>                 
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Response</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                              <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                      </form>
+              </div> -->
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            &copy; 2014 Copyright Eureka
+            <!-- <a class="grey-text text-lighten-4 right" href="#!">Tweet Us</a> -->
+            </div>
+          </div>
+        </footer>
+    	
+
+    </body>
+
+</html>

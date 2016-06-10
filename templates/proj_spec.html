@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+
+{% block title %} Eureka | {{cat}} {% endblock %}
+
+
+{% block header %}
+
+        <div class="navbar-fixed">
+          <nav class="blue" >
+            <div class="nav-wrapper">
+              <a href="/home" class="brand-logo"> &nbsp; Eureka &nbsp;</a>
+
+
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="/profile" id="home_link"> Profile</a></li>
+                <li><a href="/new_proj" id="new_proj_link">New Project</a></li>
+                <li><a href="/logout" id="logout_link">Logout</a></li>
+
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li>
+                  <a href="#">
+                    <input id="search" type="search" placeholder="Search">
+                  </a>
+                </li>
+                <li><a href="/profile" id="home_link"> Profile</a></li>
+                <li><a href="/new_proj" id="new_proj_link">New Project</a></li>
+                <li><a href="/logout" id="logout_link">Logout</a></li>
+
+              </ul>
+
+            </div>
+          </nav>
+        </div>
+
+{% endblock %}
+
+
+{% block main %}
+
+<center> <h4> {{cat_name}} </h4> </center>
+
+  <ul class="collapsible col s12" data-collapsible="expandable">
+
+	  {% for n in proj_dict %}
+	    <li>
+	      <div class="collapsible-header"> <b> {{n['Name']}} </b> </div>
+   		      <div class="collapsible-body"><p> {{n['Desc']}} </p></div>
+	    </li>
+	   {% endfor %}
+  </ul>	
+
+   	<center>
+ 		<a class="waves-effect waves-light btn" href="/categories"> back to categories </a>
+	</center>
+
+{% endblock %}

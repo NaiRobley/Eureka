@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+
+{% block title %} Eureka | Admin Home {% endblock %}
+
+{% block header %}
+
+        <div class="navbar-fixed">
+          <nav class="blue" >
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo"> &nbsp; Eureka &nbsp;</a>
+
+
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+
+                <li><a href="/logout" id="logout_link">Logout</a></li>
+
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li>
+                  <a href="#">
+                    <input id="search" type="search" placeholder="Search">
+                  </a>
+                <li><a href="/logout" id="logout_link">Logout</a></li>
+
+              </ul>
+
+            </div>
+          </nav>
+        </div>
+
+{% endblock %}
+
+{% block main %}
+		<h2> Welcome Admin, {{nme}} </h2>
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card hoverable">
+                  <div class="card-image">
+                    <img src="./static/img/08.jpg">
+                    <span class="card-title">Welcome to Eureka</span>
+                  </div>
+                  <div class="card-content">
+                    <p>Have an idea? Have a project in mind? Need help? Need an audience? Eureka is here for you!</p>
+                  </div>
+                  <div class="card-action">
+                    <center> <a href="/report"> Generate Report </a> </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+{% endblock %}

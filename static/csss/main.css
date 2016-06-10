@@ -1,0 +1,216 @@
+
+/* CSS File */
+
+@font-face {
+	font-family: "myFont";
+	src: url("rosemary.ttf");
+}
+
+#container { 
+	width: 75%; 
+	margin: 10px auto;
+	background-color: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.main {
+	background-color: #303030;
+	color: white;
+	padding: 10px;
+	margin: 10px auto;
+	/* background-color: #fafafa; */
+}
+
+#navigation {
+	border-style: hidden;
+	background-color: #377BA8;
+	color: white;
+	margin: 5px 5px;
+	padding: 5px;
+	text-decoration: inherit;
+	border-radius: 5px;
+}
+
+a#home_link, #new_proj_link, #logout_link {
+	color: white;
+	text-decoration: inherit;
+	border-radius: 5px;
+	/*border-style: hidden;*/
+	/*background-color: #377BA8;*/
+	/*margin: 5px 5px;*/
+	/*padding: 5px;*/
+}
+
+a.logo {
+	text-decoration: inherit;
+	color: white;
+	/*color: #377BA8;*/
+}
+
+a.categories , .edit_profile, .cancelbutton {
+	color: white;
+	margin: 5px 5px;
+	padding: 5px;
+	text-decoration: inherit;
+	border-radius: 5px;
+	/*border-style: hidden;*/
+	/*background-color: #377BA8;*/
+}
+
+a.buttons {
+	margin: 10px;
+	padding: 5px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	background: linear-gradient(top, #68b12f, #50911e); /* gradient */
+	background-color: #428bca;
+	border-style: hidden;
+}
+
+a.other_link {
+	color: #428bca;
+	text-decoration: inherit;
+	/*color: #375a7f;*/
+	/*color: #377BA8;*/
+	/*border-radius: 5px;*/
+	/*border-style: solid;*/
+	/*border-spacing: 5px;*/
+	/*border-color: #375a7f;*/
+	}
+
+header {
+	color: white;
+	background-color: #375a7f;
+	height: 90px;
+	text-align: center;
+	border-style: hidden;
+	padding: 5px;
+	margin: 0 auto;
+	/*font-family: verdana, arial, helvetica, sans-serif;*/
+	/*background-image: url('../img/bigg.png');*/
+}
+
+#mheader {
+	color: #377BA8;
+}
+
+footer {
+	color: white;
+	background-color: #375a7f;
+	height: 40px;
+	padding: 5px;
+	text-align: center;
+	font-style: italic;
+	border-style: hidden;
+	margin: 0 auto;
+	/*font-family: verdana, arial, helvetica, sans-serif;*/
+	/*background-image: url('../img/bigg.png');*/
+}
+
+.logo {
+	float: left;
+	color: white;
+	margin: 0 auto;
+	padding: 5px;
+	text-decoration: inherit;
+	border-radius: 5px;
+	font-family: "myFont", sans-serif;
+	/*border-style: hidden;*/
+}
+
+hr {
+	line-height: 3px;
+	height: 7px;
+	background-color: #377BA8;
+	border-style: hidden;
+	border-radius: 3px;
+}
+
+input {
+	border-radius: 3px;
+	text-align: center;
+	background-color: #cdcdcd;
+	border-style: hidden;
+	/*background-color: #EEE9E9;*/
+	/*height: 30 px;*/
+}
+
+textarea {
+	border-radius: 3px;
+	text-align: center;
+	background-color: #cdcdcd;
+	border-style: hidden;
+	height: 100px;
+	width: 300px;
+	/*background-color: #EEE9E9;*/
+	/*height: 30 px;*/
+}
+
+input[type="submit"] {
+	margin: 10px;
+	padding: 5px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	background: linear-gradient(top, #68b12f, #50911e); /* gradient */
+	background-color: #428bca;
+	border-style: hidden;
+}
+
+input[type="button"] {
+	margin: 10px;
+	padding: 5px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	background: linear-gradient(top, #68b12f, #50911e); /* gradient */
+	background-color: #428bca;
+	border-style: hidden;
+	/*background-color: #375a7f;*/
+}
+
+select {
+	border-radius: 3px;
+	text-align: center;
+	height: 25px;
+	background-color: #cdcdcd;
+	border-style: hidden;
+	/*background-color: #EEE9E9;*/
+}
+
+#article_login, #article_reg {
+	text-align: center;
+	margin: 0 auto;
+}
+
+table , tr, td, th{
+	border: 3px solid #377BA8;
+	height: 20px;
+	padding: 2px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	background-color: #222222;
+}
+
+body {
+	background-color: #222222;
+	/* background-color: #cdcdcd; */
+}
+
+.href_report {
+	margin: 10px;
+	padding: 5px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	background: linear-gradient(top, #68b12f, #50911e); /* gradient */
+	background-color: #428bca;
+	border-style: hidden;
+	text-decoration: inherit;
+}
